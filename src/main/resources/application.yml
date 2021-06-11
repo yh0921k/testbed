@@ -1,0 +1,6 @@
+jasypt:
+  encryptor:
+    property:
+      prefix: ENC(
+      suffix: )
+    algorithm: PBEWithMD5AndDES
