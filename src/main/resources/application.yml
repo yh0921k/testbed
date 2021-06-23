@@ -4,3 +4,5 @@ jasypt:
       prefix: ENC(
       suffix: )
     algorithm: PBEWithMD5AndDES
+jwt:
+  secret: 2021-06-22-17-13-testbed-springboot-server-application-jwt-token-secret-key
