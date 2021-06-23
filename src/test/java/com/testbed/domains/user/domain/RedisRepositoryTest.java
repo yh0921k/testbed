@@ -9,19 +9,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserRepositoryTest {
+class RedisRepositoryTest {
 
-  @Autowired private UserRepository userRepository;
+  @Autowired private RedisRepository redisRepository;
 
   @Test
   public void basicCrudOperations() {
     User user = User.builder().name("kkk").password("112233").build();
 
     // when
-    User savedUser = userRepository.save(user);
+    User savedUser = redisRepository.save(user);
 
     // then
-    Optional<User> findUser = userRepository.findById(savedUser.getId());
+    Optional<User> findUser = redisRepository.findById(savedUser.getId());
 
     assertThat(findUser.isPresent(), equalTo(Boolean.TRUE));
     assertThat(findUser.get().getName(), equalTo(savedUser.getName()));
