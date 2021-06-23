@@ -24,6 +24,7 @@ public class UserSignInService {
 
     AuthToken accessToken = userAuthService.createAccessToken(userEntity);
     AuthToken refreshToken = userAuthService.createRefreshToken(userEntity);
+    userAuthService.save(userEntity, refreshToken.getValue());
 
     return UserTokenInfo.builder()
         .userIndex(userEntity.getId())
