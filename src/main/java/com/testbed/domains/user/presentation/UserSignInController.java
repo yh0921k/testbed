@@ -2,7 +2,7 @@ package com.testbed.domains.user.presentation;
 
 import com.testbed.domains.user.application.UserSignInService;
 import com.testbed.domains.user.application.dto.UserSignInRequest;
-import com.testbed.domains.user.application.dto.UserSignInResponse;
+import com.testbed.domains.user.application.dto.UserTokenInfo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +16,7 @@ public class UserSignInController {
   private final UserSignInService userSignInService;
 
   @PostMapping("/sign-in")
-  public ResponseEntity<UserSignInResponse> signIn(
+  public ResponseEntity<UserTokenInfo> signIn(
       @RequestBody UserSignInRequest userSignInRequest) {
     return ResponseEntity.ok(userSignInService.signIn(userSignInRequest));
   }

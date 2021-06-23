@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 public enum TokenType {
   ACCESS_TOKEN("accessToken", 1),
-  REFRESH_TOKEN("refreshToken", 5);
+  REFRESH_TOKEN("refreshToken", 3);
 
   private String name;
   private long expiredMinutes;

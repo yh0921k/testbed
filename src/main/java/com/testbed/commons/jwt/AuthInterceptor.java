@@ -26,20 +26,12 @@ public class AuthInterceptor implements HandlerInterceptor {
       HttpServletRequest servletRequest, HttpServletResponse servletResponse, Object handler)
       throws Exception {
 
-    log.info("=== === === === === Token Interceptor === === === === ===");
-
     Optional<String> token = parseToken(servletRequest);
     if (token.isEmpty()) {
       throw new AuthenticationException(ExceptionState.AUTHENTICATION_FAILED, "Token not exists");
     }
 
     AuthToken authToken = jwtUtils.convertAuthToken(token.get());
-    System.out.println("Token : " + authToken.getValue());
-    System.out.println(authToken.getData().get("role"));
-    System.out.println(authToken.getData().get("email"));
-    System.out.println(authToken.getData().getExpiration());
-    System.out.println(authToken.getData().getIssuedAt());
-    System.out.println(authToken.getData().getSubject());
     authToken.validate();
     if (Role.USER.getCode().equals(authToken.getData().get("role"))) {
       return true;

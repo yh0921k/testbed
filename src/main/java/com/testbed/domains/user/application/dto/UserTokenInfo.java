@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class UserSignInResponse {
+public class UserTokenInfo {
   private Long userIndex;
   private String accessToken;
   private String refreshToken;
