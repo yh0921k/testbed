@@ -7,7 +7,8 @@ import org.springframework.http.HttpStatus;
 public enum ExceptionState {
   AUTHENTICATION_FAILED(401, HttpStatus.UNAUTHORIZED, "AUTH001", "Invalid Authentication"),
   AUTHORIZATION_FAILED(403, HttpStatus.FORBIDDEN, "AUTH002", "Invalid Authorization"),
-  INVALID_TOKEN(401, HttpStatus.UNAUTHORIZED, "AUTH003", "Invalid Auth Token");
+  INVALID_TOKEN(401, HttpStatus.UNAUTHORIZED, "AUTH003", "Invalid Auth Token"),
+  FORCE_REFRESH(401, HttpStatus.UNAUTHORIZED, "AUTH004", "Sign-in Again");
 
   private final int value;
   private final HttpStatus httpStatus;
