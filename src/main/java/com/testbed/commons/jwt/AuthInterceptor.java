@@ -1,7 +1,7 @@
 package com.testbed.commons.jwt;
 
-import com.testbed.commons.exception.AuthenticationException;
-import com.testbed.commons.exception.AuthorizationException;
+import com.testbed.commons.exception.detail.AuthenticationException;
+import com.testbed.commons.exception.detail.AuthorizationException;
 import com.testbed.commons.exception.ExceptionState;
 import com.testbed.domains.user.domain.Role;
 import java.util.Optional;

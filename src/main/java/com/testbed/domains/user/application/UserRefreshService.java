@@ -1,7 +1,7 @@
 package com.testbed.domains.user.application;
 
 import com.testbed.commons.exception.ExceptionState;
-import com.testbed.commons.exception.JwtRuntimeException;
+import com.testbed.commons.exception.detail.JwtRuntimeException;
 import com.testbed.commons.jwt.AuthToken;
 import com.testbed.commons.jwt.JwtUtils;
 import com.testbed.domains.user.application.dto.UserTokenInfo;
