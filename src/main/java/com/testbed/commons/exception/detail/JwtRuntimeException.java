@@ -1,5 +1,6 @@
-package com.testbed.commons.exception;
+package com.testbed.commons.exception.detail;
 
+import com.testbed.commons.exception.ExceptionState;
 import lombok.Getter;
 
 @Getter
