@@ -1,7 +1,7 @@
 package com.testbed.commons.jwt;
 
 import com.testbed.commons.exception.ExceptionState;
-import com.testbed.commons.exception.JwtRuntimeException;
+import com.testbed.commons.exception.detail.JwtRuntimeException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

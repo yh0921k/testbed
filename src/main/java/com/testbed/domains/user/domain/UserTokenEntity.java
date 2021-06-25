@@ -1,7 +1,7 @@
 package com.testbed.domains.user.domain;
 
 import com.testbed.commons.exception.ExceptionState;
-import com.testbed.commons.exception.JwtRuntimeException;
+import com.testbed.commons.exception.detail.JwtRuntimeException;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

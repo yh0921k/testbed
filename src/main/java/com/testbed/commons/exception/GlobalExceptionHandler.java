@@ -1,5 +1,8 @@
 package com.testbed.commons.exception;
 
+import com.testbed.commons.exception.detail.AuthenticationException;
+import com.testbed.commons.exception.detail.AuthorizationException;
+import com.testbed.commons.exception.detail.JwtRuntimeException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
