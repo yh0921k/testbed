@@ -6,3 +6,8 @@ jasypt:
     algorithm: PBEWithMD5AndDES
 jwt:
   secret: 2021-06-22-17-13-testbed-springboot-server-application-jwt-token-secret-key
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB

@@ -18,6 +18,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
         .addInterceptor(authInterceptor)
         .addPathPatterns("/**")
         .excludePathPatterns(
-            "/sign-up", "/sign-in", "/users/refresh", "/encrypt", "/decrypt", "/exception/**");
+            "/sign-up",
+            "/sign-in",
+            "/users/refresh",
+            "/encrypt",
+            "/decrypt",
+            "/exception/**",
+            "/upload");
   }
 }
