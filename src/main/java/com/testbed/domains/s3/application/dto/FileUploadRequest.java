@@ -5,6 +5,6 @@ import lombok.Getter;
 
 @Getter
 public class FileUploadRequest {
-  String script;
-  List<Long> deleteIndexList;
+  private Long userIndex;
+  private List<Long> deleteIndexList;
 }

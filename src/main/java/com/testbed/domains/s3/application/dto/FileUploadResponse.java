@@ -1,5 +1,6 @@
 package com.testbed.domains.s3.application.dto;
 
+import java.util.List;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,5 +12,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class FileUploadResponse {
-  String accessUrl;
+  List<String> accessUrlList;
 }
