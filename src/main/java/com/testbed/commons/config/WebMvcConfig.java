@@ -24,6 +24,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
             "/encrypt",
             "/decrypt",
             "/exception/**",
-            "/upload");
+            "/upload",
+            "/hash/**");
   }
 }
