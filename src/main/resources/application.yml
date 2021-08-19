@@ -1,3 +1,4 @@
+
 jasypt:
   encryptor:
     property:
@@ -5,7 +6,7 @@ jasypt:
       suffix: )
     algorithm: PBEWithMD5AndDES
 jwt:
-  secret: 2021-06-22-17-13-testbed-springboot-server-application-jwt-token-secret-key
+  secret: ENC(PI08vL6ZjPnuNwrk/be4lKuLFCIAzRaFFxEvwY4/ZyutyonU1OYoOIhKGAZb6FJwyJhScejJKjRw9E3aM+rzWynFDK4dP66rWQ8oaLpw3kITyKHQuCP5vg==)
 spring:
   servlet:
     multipart:
@@ -14,11 +15,13 @@ spring:
 cloud:
   aws:
     credentials:
-      accessKey:
-      secretKey:
+      accessKey: ENC(wwv6CTXQkv4rt6j34SD7y4VLUP5N7b3IL62oRCUnP0I=)
+      secretKey: ENC(0ZVAr2rHRw5cKUTA6aixl7/CPNXIEKPhFEhMy7VnHpC3mpXBMHX4BCLpdA84IUSORkP7FZYotMI=)
     s3:
-      bucket:
+      bucket: ENC(SdEEy3jBswZRQdCgpkB8eJZtCTT4vkfA)
     region:
-      static:
+      static: ENC(kox0L0aJNpuyexJ5NczEec/YrrFYVeBJ)
 #    stack:
 #      auto: false
+server:
+  port: 80
