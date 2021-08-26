@@ -19,7 +19,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     registry.addInterceptor(printRequestInterceptor).addPathPatterns("/**");
     registry
         .addInterceptor(authInterceptor)
-        .excludePathPatterns("/**")
+        .excludePathPatterns("**")
         .addPathPatterns("/users/**");
   }
 }

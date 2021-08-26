@@ -19,6 +19,7 @@ public class GlobalExceptionHandler {
   @ExceptionHandler(Exception.class)
   protected ResponseEntity<ExceptionResponse> handleException(Exception exception) {
     log.info("handleException() : ", exception.getMessage());
+    exception.printStackTrace();
     ExceptionResponse exceptionResponse =
         ExceptionResponse.builder().reason(exception.getMessage()).build();
     return ResponseEntity.badRequest().body(exceptionResponse);
