@@ -16,6 +16,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+  @ExceptionHandler(Exception.class)
+  protected ResponseEntity<ExceptionResponse> handleException(Exception exception) {
+    log.info("handleException() : ", exception.getMessage());
+    ExceptionResponse exceptionResponse =
+        ExceptionResponse.builder().reason(exception.getMessage()).build();
+    return ResponseEntity.badRequest().body(exceptionResponse);
+  }
+
   @ExceptionHandler(AuthenticationException.class)
   protected ResponseEntity<ExceptionResponse> handleAuthenticationException(
       AuthenticationException authenticationException) {
