@@ -19,17 +19,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     registry.addInterceptor(printRequestInterceptor).addPathPatterns("/**");
     registry
         .addInterceptor(authInterceptor)
-        .addPathPatterns("/**")
-        .excludePathPatterns(
-            "/",
-            "/favicon.ico",
-            "/sign-up",
-            "/sign-in",
-            "/users/refresh",
-            "/encrypt",
-            "/decrypt",
-            "/exception/**",
-            "/upload",
-            "/hash/**");
+        .excludePathPatterns("/**")
+        .addPathPatterns("/users/**");
   }
 }
