@@ -1,5 +1,6 @@
 package com.testbed.domains.io_bound;
 
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -31,5 +32,10 @@ public class PostController {
   @GetMapping("/post/{id}")
   public Post getPostById(@PathVariable Long id) {
     return postRepository.findById(id).get();
+  }
+
+  @GetMapping("/search")
+  public List<Post> findPostByContent(@RequestParam String content) {
+    return postRepository.findByContentContains(content);
   }
 }
