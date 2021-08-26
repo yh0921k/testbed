@@ -4,6 +4,7 @@ import com.testbed.commons.interceptor.PrintRequestInterceptor;
 import com.testbed.commons.jwt.AuthInterceptor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -19,7 +20,15 @@ public class WebMvcConfig implements WebMvcConfigurer {
     registry.addInterceptor(printRequestInterceptor).addPathPatterns("/**");
     registry
         .addInterceptor(authInterceptor)
-        .excludePathPatterns("**")
+        .excludePathPatterns("/**")
         .addPathPatterns("/users/**");
+  }
+
+  @Override
+  public void addCorsMappings(CorsRegistry registry) {
+    registry
+        .addMapping("/**")
+        .allowedOriginPatterns("*")
+        .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH");
   }
 }
