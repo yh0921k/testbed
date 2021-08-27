@@ -27,6 +27,11 @@ spring:
         format_sql: true
     hibernate:
       ddl-auto: update
+  rabbitmq:
+    host: ENC(kPNnJbCvw8nqzxbrC6oVW+9JEruWjAH7)
+    username: ENC(r8uDJ2AqG8kWlhI3AAn+ng==)
+    password: ENC(WR3khTFDDY/vL+WYU6QaTg==)
+    port: 5672
 jasypt:
   encryptor:
     property:
