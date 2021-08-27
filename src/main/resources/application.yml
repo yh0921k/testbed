@@ -28,7 +28,7 @@ spring:
     hibernate:
       ddl-auto: update
   rabbitmq:
-    host: ENC(OY9EHQgsmKiO5PTPa8SzrXthDHGV8Uk2)
+    host: ENC(bsI7as07eRNwIhE4VM3P5pFpmOgkC87Q)
     username: ENC(r8uDJ2AqG8kWlhI3AAn+ng==)
     password: ENC(WR3khTFDDY/vL+WYU6QaTg==)
     port: 5672
