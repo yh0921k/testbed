@@ -1,5 +1,7 @@
 package com.testbed.domains.io_bound;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -18,10 +20,15 @@ public class PostController {
 
   private static Integer PAGE_SIZE = 20;
   private final PostRepository postRepository;
+  private final Producer producer;
+  private final ObjectMapper objectMapper;
 
   @PostMapping("/post")
-  public Post createPost(@RequestBody Post post) {
-    return postRepository.save(Post.builder().content(post.getContent()).build());
+  public Post createPost(@RequestBody Post post) throws JsonProcessingException {
+    // return postRepository.save(Post.builder().content(post.getContent()).build());
+    String jsonPost = objectMapper.writeValueAsString(post);
+    producer.sendTo(jsonPost);
+    return post;
   }
 
   @GetMapping("/posts")
