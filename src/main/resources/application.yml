@@ -3,16 +3,16 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
-#  datasource:
-#    url: jdbc:h2:mem:testdb
-#    driver-class-name: org.h2.Driver
-#    username: sa
-#    password:
   datasource:
-    url: ENC(o7wyn4Y/DvB1i1QR+psKUcg5zEwc1BCP0ur7vMAh8IkvhdpZt1T/yCh5xe/bSt3eKScyMxmKBd8+Krpj/wiPDUCVlHb7fe8zLqyQ0mVCbWECC7o0YS+dl5z42yoTzWXk7x/dJuXx2kl3zV/IHB/EnuT3Kyg/wvgJ1DfzJj+aV0ViVQOHDSDKHxQGPeT3W0SO)
-    driver-class-name: org.mariadb.jdbc.Driver
-    username: ENC(zUOU4WOREW8AzOLRzMNvjg==)
-    password: ENC(gcEfzZpOaUQnCQ1JJw0ew8vRl4Ejgt6S)
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+#  datasource:
+#    url: ENC(o7wyn4Y/DvB1i1QR+psKUcg5zEwc1BCP0ur7vMAh8IkvhdpZt1T/yCh5xe/bSt3eKScyMxmKBd8+Krpj/wiPDUCVlHb7fe8zLqyQ0mVCbWECC7o0YS+dl5z42yoTzWXk7x/dJuXx2kl3zV/IHB/EnuT3Kyg/wvgJ1DfzJj+aV0ViVQOHDSDKHxQGPeT3W0SO)
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    username: ENC(zUOU4WOREW8AzOLRzMNvjg==)
+#    password: ENC(gcEfzZpOaUQnCQ1JJw0ew8vRl4Ejgt6S)
   h2:
     console:
       enabled: true
